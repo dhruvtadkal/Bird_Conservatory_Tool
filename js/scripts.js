@@ -69,43 +69,43 @@ window.addEventListener('DOMContentLoaded', event => {
 
 let url1 = 'https://raw.githubusercontent.com/dhruvtadkal/plotly/main/response_1661253641153.json'
 
-//table
-var values = [
-	['No of species', 'No of observers'],
-	[65394, 209361]]
-
-var headerColor = "#64a19d";
-var rowEvenColor = "lightgrey";
-var rowOddColor = "white";
-
-var data = [{
-type: 'table',
-header: {
-  values: [["<b>Summary</b>"]],
-  align: "center",
-  line: {width: 1, color: 'black'},
-  fill: {color: headerColor},
-  font: {family: "Arial", size: 12, color: "white"}
-},
-cells: {
-  values: values,
-  align: "center",
-  line: {color: "black", width: 1},
-  fill: {color: [[rowOddColor,rowEvenColor,rowOddColor,
-						rowEvenColor,rowOddColor]]},
-  font: {family: "Arial", size: 11, color: ["black"]}
-}
-}]
-
-Plotly.newPlot('myTable', data);
-
-
 //fetching values
 fetch(url1).then(res => res.json()).then(json => {
     let value1 = json["No of species:"];
-    document.getElementById("value1").innerHTML = value1;
+    //document.getElementById("value1").innerHTML = value1;
     let value2 = json["No of Observers:"];
-    document.getElementById("value2").innerHTML = value2;
+    //document.getElementById("value2").innerHTML = value2;
+
+    //table
+    var values = [
+        ['No of species', 'No of observers'],
+        [value1, value2]
+    ];
+
+    var headerColor = "#64a19d";
+    var rowEvenColor = "lightgrey";
+    var rowOddColor = "white";
+
+    var data = [{
+    type: 'table',
+    header: {
+    values: [["<b>Summary</b>"]],
+    align: "center",
+    line: {width: 1, color: 'black'},
+    fill: {color: headerColor},
+    font: {family: "Arial", size: 12, color: "white"}
+    },
+    cells: {
+    values: values,
+    align: "center",
+    line: {color: "black", width: 1},
+    fill: {color: [[rowOddColor,rowEvenColor,rowOddColor,
+                            rowEvenColor,rowOddColor]]},
+    font: {family: "Arial", size: 11, color: ["black"]}
+    }
+    }]
+
+    Plotly.newPlot('myTable', data);
 })
 
 //fetching json data (IUCN Count)

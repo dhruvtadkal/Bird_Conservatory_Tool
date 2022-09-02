@@ -1,0 +1,71 @@
+<!-- Select -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Bird Conservation Tool</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet"/>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <main-nav></main-nav>
+
+        <section class="about-section text-center bg-black" id="about">
+            <h1 class="text-white mb-5 my-0 text-uppercase">EBird Conservation Tool</h1>
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-12 mb-3 mb-md-0">
+                        <form action="#" class="mt-5 pt-2">
+                            <label for="report" class="text-white mb-5">Locality:</label>
+                            <select name="report" id="report" class="btn btn-primary">
+                                <!-- <option value="summary" class="dropdown-item">Summary</option> -->
+                            </select>
+                        </form>
+                    </div>
+                </div>
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <h2 class="text-white mb-3 mt-5">Choose start date : </h2>
+                        <input type="date" id="date" name="daterange" value="2015-01-01" min="2015-01-01" max="2018-12-31">
+                    </div>
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <h2 class="text-white mb-3 mt-5">Choose end date : </h2>
+                        <input type="date" id="date" name="daterange" max="2018-12-31" min="2015-01-01">
+                    </div>    
+                </div>
+
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <form action="#" class="mt-5 pt-2 text-lg-start">
+                            <label for="report" class="text-white">Report type:</label>
+                            <select name="report" id="report" class="btn btn-primary">
+                                <option value="summary">Summary</option>
+                                <option value="species">Species</option>
+                            </select>
+                        </form>
+                    </div>     
+                </div>
+                <div class="pt-5">
+                    <a class="btn btn-secondary mt-5 mb-3" href="#about">Get data</a>
+                </div>            
+            </div>   
+        </section>
+    
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
+        
